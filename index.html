@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Usuario</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<link rel="stylesheet" href="material.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="JS/controler.js"></script>
+</head>
+<body>
+
+
+
+	<div class="mdl-layout mdl-layout--fixed-header" >
+		<div class="">
+			<header class="mdl-layout__header" style="background-color: #0097a7" >
+
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+	          <span class="mdl-layout-title"><img src="img/medic.png" width="50" height="50"  onclick="activarTab('principal')" align="center"></span>
+	          <!-- Add spacer, to align navigation to the right -->
+	          <div class="mdl-layout-spacer"></div>
+	          <!-- Navigation. We hide it in small screens. -->
+
+	        <nav class="mdl-navigation">
+	        		<a class="fa fa-pencil-square-o mdl-navigation__link" style="font-size:20px;color:#e0f7fa;text-shadow:5px 5px 10px #000000;"  onclick="activarTab('formulario')"></a><span class="tooltiptext">Crear cita</span>
+	        		<a  class="fa fa-bell mdl-navigation__link" style="font-size:20px;color:#e0f7fa;text-shadow:5px 5px 10px #000000;" onclick="activarTab('recordatorio')"></a><span class="tooltiptext">Recordatorio</span>
+	        		<a class="fa fa-search mdl-navigation__link" style="font-size:20px;color:#e0f7fa;text-shadow:5px 5px 10px #000000;" onclick="activarTab('buscar1')"></a><span class="tooltiptext">Buscar</span>
+			
+	        </nav>
+        </div> 
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Valeria Calva</span>       
+      </div>
+		</div> 
+    </div>
+
+			<div id="principal" class="botones">
+				<br>
+				<center><img src="img/medic.png" width="100" height="100"></center>
+				<h3><center>Hola Paciente1245</center></h3>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<center><img src="img/m1.jpg"></center>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<div class=pantprin>
+				<center><h6>Con la finalidad de brindarle una mejor calidad de servicio en el ámbito de la medicina 
+					se creo Medic que te ayudara a controlar tus actividades medicas.</h6></center>
+				</div>
+			</div>
+
+			<div id="formulario" class="botones" style="display: none">
+				
+						<center><form>
+						<h2 class="w3-animate-zoom">Registro de cita</h2>
+							N° de ficha Médica:* <br>
+							<input type="number" name="ficha" placeholder="N° de ficha" required class="datos">
+							<br>
+							Nombre:* <br>
+							<input type="text" name="Nombre" placeholder="Escribe tu nombre" required class="datos">
+							<br>
+							Apellido:*<br>
+							<input type="text" name="Apellido" placeholder="Escribe tu apellido" required class="datos">
+							<br>
+							Cedula:*<br>
+							<input type="number" name="Cedula" placeholder="Escribe tu cedula" maxlength="10" required class="datos">
+							<br>
+							Nombre del Médico:* <br>
+							<input type="text" name="medico" placeholder="Nombre del medico" required class="datos">
+							<br>
+							<input type="radio" name="gender" value="male" checked>Femenino
+							<input type="radio" name="gender" value="female"> Masculino
+							<input type="radio" name="gender" value="other"> Otro
+							<br>
+							<br>
+							Correo:<br>
+							<input type="email" name="email" class="datos">
+							<br>
+							Sintomas: <br>
+							<textarea name="mensaje" placeholder="Escriba sus sintomas" ""></textarea>
+							<br><br>
+							<input type="submit" value="Registrar cita" id="boton" class="datos">
+							
+						</form></center>
+			</div>
+
+			<div id="recordatorio" class="botones" style="display: none">
+				<center>
+					<center><h1>Recordatorios</h1></center>
+					
+					<center><li>Tomar medicamento para la diabetes: 10 a.m</li></center>
+					<center><li>Ir a la cita médica: 14:00 p.m</li></center>
+					<center><li>Reservar cita médica: 16:30 p.m</li></center>
+					<center><li>Tomar medicamento para la tiroides: 19:00 p.m</li></center>
+					<br>
+					<center><button type="submit" id="NuevoRecordatorio" value="Nuevo Recordatorio" onclick="activarTab('crearRecordatorio')"">Nuevo recordatorio</button> </center>
+					<br>
+				</center>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+
+			<div id="buscar1" class="botones" style="display: none">
+				
+					<br>
+					<br>
+					<center><select name="buscar" class="buscar"></center>
+			   		<option value="1">Precio</option> 
+			   		<option value="2">Cercanía</option> 
+			   		<option value="3">Recomendacion</option>
+					</select>
+				
+						
+					<br>
+					<section class="webdesigntuts-workshop">
+					<form action="" method="">		    
+					<center><input type="search" name="w3-input w3-border w3-padding" type="text" placeholder="Buscar.." id="myInput" onkeyup="myFunction()"><button class="boto">Search</button></center>	
+					<ul class="w3-ul w3-margin-top" id="myUL"><br><br>
+						<li>Juan Perez</li>
+						<li >Alberto Chuchuca</li>
+						<li >Sigifredo Antonio</li>
+						<li >Sandro Mano</li>
+					</ul>
+					
+					</form>
+					</section>
+					<br>	
+					<br>
+					<br>
+					<br>	
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+			</div>
+			<div id="crearRecordatorio" class="botones" >
+				<br>
+				<center><h1>Nuevo recordatorio</h1></center>
+				<center>
+					<div ng-app="holaMundo" ng-controller="p1">
+						<p>Ingrese algo en el cuadro de texto</p>
+						<p>correo<input type="text" ng-model="texto"></p><br>
+						<p ng-bind="texto"></p>
+					</div>
+					
+					Fecha de recordatorio<br>
+					<input type="number" name="ficha" placeholder="Día" required ><input type="number" name="ficha" placeholder="Mes" required ><input type="number" name="ficha" placeholder="Año" required >
+					<br>
+					<center></center><textarea id="txt" name="mensaje" placeholder="Recordatorio" ""></textarea></center>
+				<center>
+					<button type="submit" id="NuevoRecordatorio" value="Nuevo Recordatorio" onclick="activarTab('recordatorio')">Atrás</button>
+					<button type="submit" id="NuevoRecordatorio" value="Nuevo Recordatorio" onclick="activarTab('crearRecordatorio')">Guardar</button>
+				 </center>
+				 <br>	
+					<br>
+					<br>
+					<br>	
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>	
+					<br>
+					<br>
+					<br>	
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+
+
+			</div>
+			<script type="text/javascript">
+				function activarTab(idTab){
+					var i;
+					var x=document.getElementsByClassName("botones");
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display="none";
+					}
+					document.getElementById(idTab).style.display="block";
+				}
+			</script>
+
+			<script>
+				function myFunction() {
+		    		var input, filter, ul, li, a, i;
+		   			input = document.getElementById("myInput");
+		    		filter = input.value.toUpperCase();
+		    		ul = document.getElementById("myUL");
+		    		li = ul.getElementsByTagName("li");
+		    		for (i = 0; i < li.length; i++) {
+		       			if (li[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+		        	    	li[i].style.display = "";
+		        		} else {
+		        	    	li[i].style.display = "none";
+		        		}
+		    		}	
+				}
+			</script>
+
+</body>
+</html>
